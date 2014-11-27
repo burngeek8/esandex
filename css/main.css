@@ -243,7 +243,32 @@ header .logo img
 }
 .menu
 {
-	display: none;
+	padding: 10px;
+	font-size: 14px;
+}
+.menu ul
+{
+	list-style: none;
+	padding: 0;
+}
+.menu ul li
+{
+	width: 260px;
+	display: inline-block;
+}
+.menu ul li a
+{
+	display: block;
+	background-color: #444;
+	padding: 20px;
+	border-radius: 10px;
+	color: #e9e9e9;
+	text-decoration: none;
+}
+.menu ul li a:hover
+{
+	background-color: #4B7F00;
+	font-weight: bolder;
 }
 .opcionCuenta
 {
