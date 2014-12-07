@@ -6,6 +6,7 @@ function inicio()
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
+	$('#confirmarCuenta').on('click', confirmarCuenta);
 }
 function listaDeChats()
 {
@@ -22,6 +23,22 @@ function chatear()
 	$('.chatAmigo').addClass('activo');
 	
 }
+function confirmarCuenta()
+{
+	var url = "/php/confirmarCuenta.php";
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#formConfirmarCuenta").serialize(),
+		success: function(data){
+			$("#respuestaConfirmacionCuenta").html(data);
+			}
+	});
+	$('#respuestaConfirmacionCuenta').slideToggle();
+	$('.vaciar').val('');
+	return false;
+}
 function admin()
 {
 	window.location = '/'
@@ -34,6 +51,7 @@ function ocultar()
 {
 	console.log('se ejecuto ocultar');
 	$('#respuestaLogin').slideToggle();
+	$('#respuestaConfirmacionCuenta').slideToggle();
 }
 function timeOcultar()
 {

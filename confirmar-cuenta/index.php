@@ -12,28 +12,22 @@
 	<!-- Scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
-	<script language="JavaScript">
- 
-		function cerrar() {
-		var ventana = window.self;
-		ventana.opener = window.self;
-		ventana.close();
-		}
- 
-</script>
+	
 </head>
 <body>
 	<div class="formulario">
 		<h1>Confirmar Cuenta</h1>
-		<div id="respuestaLogin"></div>
-		<form id="formLogIn" method="post">
+		<div id="respuestaConfirmacionCuenta" class="cajaDialogo">
+			<img src="/img/loader.gif">
+		</div>
+		<form id="formConfirmarCuenta" method="post">
 			<label>Email</label>
 			<input type="email" name="email" value="<?= $_GET['email']?>" readonly>
 			<label>Usuario</label>
 			<input type="text" name="user" placeholder="Nombre de usuario" >
 			<label>Contraseña</label>
 			<input type="password" name="password" placeholder="Contraseña">
-			<input  id="LogIn" class="botonFormulario" value="Entrar" type="submit">
+			<input  id="confirmarCuenta" class="botonFormulario" value="Entrar" type="submit">
 		</form>
 	</div>
 	<div class="opcionCuenta">
