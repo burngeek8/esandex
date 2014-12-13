@@ -12,12 +12,13 @@
 	or die("problemas en consulta:".mysql_error());
 	$arrayUsuario=mysql_fetch_array($imagen);
 
-	/*$listadoDeChats = mysql_query("SELECT * FROM chat 	AS a
-									INNER JOIN usuarios AS b
-										ON b.ID = a.EMISOR
-									where a.RECEPTOR = '$arrayUsuario[ID]'										
-									ORDER BY FECHA DESC")
-	or die("problemas en consulta:".mysql_error());*/
+	//Suma de totales que adeudan los usuarios
+	$resultDeudaUsuario = mysql_query("SELECT SUM(RESTA) as totalDeudaUsuario 
+								   FROM deuda 
+								   WHERE CLIENTE='$arrayUsuario[EMAIL]'")
+							or die("No sabemos cuanto debes"); 
+
+	$totalDeudaUsuario = mysql_fetch_array($resultDeudaUsuario, MYSQL_ASSOC);
 	//Listado de menus
 	$menu = mysql_query("SELECT * FROM menu ORDER BY ID DESC")
 	or die("problemas en consulta:".mysql_error());
@@ -31,6 +32,15 @@
 
 	$usuarios = mysql_query("SELECT * FROM usuarios ORDER BY ID DESC")
 	or die("problemas en consulta:".mysql_error());
+
+	/*$listadoDeChats = mysql_query("SELECT * FROM chat 	AS a
+									INNER JOIN usuarios AS b
+										ON b.ID = a.EMISOR
+									where a.RECEPTOR = '$arrayUsuario[ID]'										
+									ORDER BY FECHA DESC")
+	or die("problemas en consulta:".mysql_error());*/
+	//Listado de menus
+	
 
 	/*$registro = mysql_query("SELECT * FROM contacto ORDER BY ID DESC")
 	or die("problemas en consulta:".mysql_error());*/
@@ -71,13 +81,7 @@
 	/*$result = mysql_query("SELECT SUM(RESTA) as total FROM deuda");   
 	$totalDeuda = mysql_fetch_array($result, MYSQL_ASSOC);*/
 
-	//Suma de totales que adeudan los usuarios
-	/*$resultDeudaUsuario = mysql_query("SELECT SUM(RESTA) as totalDeudaUsuario 
-								   FROM deuda 
-								   WHERE CLIENTE='$arrayUsuario[EMAIL]'")
-					or die("No sabemos cuanto debes"); */
-
-	/*$totalDeudaUsuario = mysql_fetch_array($resultDeudaUsuario, MYSQL_ASSOC);*/
+	
 
 
 

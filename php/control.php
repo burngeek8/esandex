@@ -1,9 +1,9 @@
 <?php
 	@session_start();
-	if($_SESSION[control] != "hola")
+	if($_SESSION['control'] != "hola")
 		{
 			session_destroy();
-			header('location: /login');
+			header('location: /');
 		}
 
 ?>

@@ -12,7 +12,12 @@
     $(document).on('ready', pantallaActiva);
         function pantallaActiva()
         {
-            $( ".logo a" ).attr("href", '#');
+          $( ".logo a" ).attr("href", '#');
+          if($('.monto').html() == 0)
+          {
+            $('.monto').html('0.00');
+            console.log('no debe nada');
+          } 
         }
       function pepe()
       {
@@ -36,7 +41,7 @@
       <div class="deuda">
         <p>Tu deuda hasta hoy es</p>
         
-        <div class="montoDeuda"> S/. <?= $totalDeudaUsuario['totalDeudaUsuario'] ?></div>
+        <div class="montoDeuda"> S/. <span class="monto"> <?= $totalDeudaUsuario['totalDeudaUsuario'] ?> </span></div>
       </div>
         <div class="menu">
           <ul>
