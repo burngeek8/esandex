@@ -7,6 +7,17 @@ function inicio()
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
 	$('#confirmarCuenta').on('click', confirmarCuenta);
+	$('.botonNuevo').on('click', nuevoUsuario);
+	$('.cerrarPopups').on('click', cerrarPopups);
+}
+function cerrarPopups()
+{
+	$('.popup').css('display', 'none');
+}
+function nuevoUsuario()
+{
+	console.log('Nuevo Usuario')
+	$('.popNuevoUsuario').slideToggle();
 }
 function listaDeChats()
 {
@@ -90,9 +101,10 @@ function logIn()
 	$('#respuestaLogin').slideToggle();
 	return false;
 }
-
 function PreRegister()
 {
+	console.log('usuario pre registrado');
+	$('.popNuevoUsuario').slideToggle();
 	var url = "/php/insPreRegistro.php";
 
 	$.ajax({

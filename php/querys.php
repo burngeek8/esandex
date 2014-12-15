@@ -8,9 +8,9 @@
 
 	$usuarioSesion	= $_SESSION['username'];
 
-	$imagen = mysql_query("SELECT * FROM usuarios where USER = '$usuarioSesion'")
+	$user = mysql_query("SELECT * FROM usuarios where USER = '$usuarioSesion'")
 	or die("problemas en consulta:".mysql_error());
-	$arrayUsuario=mysql_fetch_array($imagen);
+	$arrayUsuario=mysql_fetch_array($user);
 
 	//Suma de totales que adeudan los usuarios
 	$resultDeudaUsuario = mysql_query("SELECT SUM(RESTA) as totalDeudaUsuario 
@@ -19,14 +19,20 @@
 							or die("No sabemos cuanto debes"); 
 
 	$totalDeudaUsuario = mysql_fetch_array($resultDeudaUsuario, MYSQL_ASSOC);
+	//Lista de deudas del usuario logueado
+	$deudaUsuario = mysql_query("SELECT * 
+								   FROM deuda  
+								   WHERE CLIENTE = '$arrayUsuario[EMAIL]'")
+							or die("No sabemos cuanto debes"); 
+	
 	//Listado de menus
 	$menu = mysql_query("SELECT * FROM menu ORDER BY ID DESC")
 	or die("problemas en consulta:".mysql_error());
 	//Menu 2
 	$menu2 = mysql_query("SELECT * FROM usuario_menu as a
 							INNER JOIN menu as b
-								ON b.ID = a.MENU
-							where a.USUARIO = '$arrayUsuario[ID]'
+								ON b.ID = a.ID_MENU
+							where a.ID_USUARIO = '$arrayUsuario[ID]'
 							ORDER BY ID DESC")
 	or die("problemas en consulta:".mysql_error());
 
@@ -80,10 +86,6 @@
 	//Suma de totales que adeudan 
 	/*$result = mysql_query("SELECT SUM(RESTA) as total FROM deuda");   
 	$totalDeuda = mysql_fetch_array($result, MYSQL_ASSOC);*/
-
-	
-
-
 
 	/*$result = mysql_query("SELECT SUM(MONTO) as total FROM deuda WHERE idusuario=1");   
 	$row = mysql_fetch_array($result, MYSQL_ASSOC);

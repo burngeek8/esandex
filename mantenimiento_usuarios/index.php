@@ -28,9 +28,10 @@
       </div>   
     </div>
     <?php } ?>
+    <div class="botonNuevo"></div>
     <div id="respuestaUsuarioMenu"></div>
      <!-- Acceso -->
-    <div class="popup popMenus">
+    <div class="popup popMenus" style="display: none;">
       <div class="tarjeta acceso">
         <div class="titulo">ACCESO <?= $arrUsuarios['USER']; ?>
           <div class="cerrar cerrarPopups"></div>
