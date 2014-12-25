@@ -18,7 +18,7 @@
 			 		$sesion=mysql_fetch_array($sel);
 			 		if($_POST['email'] == $sesion['EMAIL'])
 			 		{
-			 			echo "<script type='text/javascript'>timeOcultar();</script>Ya existe un usuario registrado con este email<img src='/img/loader.gif'>";
+			 			echo "<script type='text/javascript'>timeOcultar();</script>Ya existe un usuario registrado con este email<img src='../img/loader.gif'>";
 			 		}
 			 		else
 			 		{
@@ -27,7 +27,7 @@
 
 				 		if($_POST['user'] == $arrUsuario['USER'])
 				 		{
-				 			echo "<script type='text/javascript'>timeOcultar();</script>El nombre de usuario ya existe, favor de ingresar otro<img src='/img/loader.gif'>";		
+				 			echo "<script type='text/javascript'>timeOcultar();</script>El nombre de usuario ya existe, favor de ingresar otro<img src='../img/loader.gif'>";		
 				 		}
 				 		else
 				 		{
@@ -43,7 +43,7 @@
 
 				 			$_SESSION['control'] = 'hola';
 				 			$_SESSION['username'] = $_POST['user']; 		
-				 			echo "Bienvenido ".$_SESSION['username']."<img src='/img/loader.gif'><script type='text/javascript'>logueado();</script>";			 			
+				 			echo "Bienvenido ".$_SESSION['username']."<img src='../img/loader.gif'><script type='text/javascript'>logueado();</script>";			 			
 				 		}			 			
 			 		}
  				}
