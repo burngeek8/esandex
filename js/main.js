@@ -44,7 +44,7 @@ function chatear()
 }
 function confirmarCuenta()
 {
-	var url = "/php/confirmarCuenta.php";
+	var url = "../php/confirmarCuenta.php";
 
 	$.ajax({
 		type: "POST",
@@ -60,11 +60,11 @@ function confirmarCuenta()
 }
 function admin()
 {
-	window.location = '/'
+	window.location = '../'
 }
 function redireccionar()
 {
-	window.location = '/'
+	window.location = '../'
 }
 function ocultar()
 {
@@ -96,7 +96,7 @@ function mostarMenu()
 }
 function logIn()
 {
-	var url = "/php/login.php";
+	var url = "../php/login.php";
 
 	$.ajax({
 		type: "POST",
@@ -113,7 +113,7 @@ function PreRegister()
 {
 	console.log('usuario pre registrado');
 	$('.popNuevoUsuario').slideToggle();
-	var url = "/php/insPreRegistro.php";
+	var url = "../php/insPreRegistro.php";
 
 	$.ajax({
 		type: "POST",

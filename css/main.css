@@ -36,7 +36,7 @@ header .logo img
 .botonNuevo
 {
 	background-color: #375d00;
-	background-image: url('/img/iconos/plus.png');
+	background-image: url('../img/iconos/plus.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 35%;
@@ -176,7 +176,7 @@ header .logo img
 	border: 0;
 	height: 45px;
 	width: 50px;
-	background-image: url('/img/iconos/enviar.png');
+	background-image: url('../img/iconos/enviar.png');
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -211,7 +211,7 @@ header .logo img
 }
 .formulario
 {
-	background-image: url('/img/logo.png');
+	background-image: url('../img/logo.png');
 	max-width: 300px;
 	background-size: 300px;
 	background-position: center 20px;
@@ -397,7 +397,7 @@ header .logo img
 .tarjeta .opciones .agregarMenus
 {
 	background-color: #375d00;
-	background-image: url('/img/iconos/plus.png');
+	background-image: url('../img/iconos/plus.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 50px;
@@ -464,7 +464,7 @@ header .logo img
 }
 .tarjeta .titulo .cerrar
 {
-	background-image: url('/img/iconos/close.png');
+	background-image: url('../img/iconos/close.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 50%;

@@ -8,17 +8,17 @@
 	<meta name="HandheldFriendly" content="true">
 	<!-- Hojas de estilo -->
 	<link rel="shortcut icon" type="image/x-icon" href="../img/logoIco.png">
-	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">	
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">	
 	<!-- Scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body>
 	<div class="formulario">
 		<h1>Iniciar Sesión</h1>
 		<div id="respuestaLogin" class="cajaDialogo">
-			<img src="/img/loader.gif">
+			<img src="../img/loader.gif">
 		</div>
 		<form id="formLogIn" method="post">
 			<label>Usuario</label>
@@ -30,7 +30,7 @@
 	</div>
 	<div class="opcionCuenta">
 		<p>¿No tienes una cuenta?</p>
-		<a href="/register">Crear una cuenta</a>
+		<a href="../register">Crear una cuenta</a>
 	</div>
 	
 </body>
