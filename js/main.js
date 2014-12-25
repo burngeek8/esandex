@@ -10,6 +10,14 @@ function inicio()
 	$('.botonNuevo').on('click', nuevoUsuario);
 	$('.cerrarPopups').on('click', cerrarPopups);
 }
+function asignarMenu(obj)
+{
+	console.log('Mostrar formulario para asignarMenu');
+	var disparador = obj;
+	var idUsuario = $(disparador).parents('.tarjeta').children('#idUsuario').html();
+	$('#inputIdUsuario').val(idUsuario);
+	$('.popMenus').slideToggle();
+}
 function cerrarPopups()
 {
 	$('.popup').css('display', 'none');

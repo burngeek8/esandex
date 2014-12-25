@@ -45,8 +45,7 @@
       <div class="listaDeudas">
       <?php while ($reg=mysql_fetch_array($deudaUsuario)) {?>
         <div class="item">
-          <?php $date = date_create($reg['FECHA_REGISTRO']); ?> 
-      
+          <?php $date = date_create($reg['FECHA_REGISTRO']); ?>      
           <div class="fecha"><?= date_format($date, 'd M Y') ?></div>
           <div class="detalle"><?= $reg['DETALLE']  ?></div>
           <div class="monto">S/. <?= $reg['MONTO']  ?></div>

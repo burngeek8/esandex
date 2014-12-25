@@ -25,6 +25,7 @@
 								   WHERE CLIENTE = '$arrayUsuario[EMAIL]'")
 							or die("No sabemos cuanto debes"); 
 	
+	
 	//Listado de menus
 	$menu = mysql_query("SELECT * FROM menu ORDER BY ID DESC")
 	or die("problemas en consulta:".mysql_error());

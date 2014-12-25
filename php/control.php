@@ -3,7 +3,7 @@
 	if($_SESSION['control'] != "hola")
 		{
 			session_destroy();
-			header('location: /');
+			header('location: /login');
 		}
 
 ?>
