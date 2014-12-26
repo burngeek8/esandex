@@ -2,7 +2,7 @@
  	@session_start();
  	include("conexion.php");
  	if 	(
-	 		isset($_POST['user']) 		&& !empty($_POST['user']) && 
+	 		isset($_POST['user']) 		&& !empty($_POST['user']) 		&& 
 	 		isset($_POST['password']) 	&& !empty($_POST['password'])
  		)
  		{

@@ -1,6 +1,6 @@
 <?php
-	$host 			= "joseluisrl.com";
-	$user 			= "burngeek_admin";
+	$host 			= "localhost";
+	$user 			= "root";
 	$pw 			= "w8uiq9da";
-	$db 			= "burngeek_desarrollo";
+	$db 			= "desarrollo";
 ?>
