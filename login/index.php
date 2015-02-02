@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">	
 	<!-- Scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/main.js"></script>
+	<!-- <script type="text/javascript" src="../js/main.js"></script> -->
 </head>
 <body>
 	<div class="formulario">
@@ -28,7 +28,7 @@
 			<input  id="LogIn" class="botonFormulario" value="Entrar" type="submit">
 		</form>
 	</div>
-	<div class="opcionCuenta">
+	<div class="opcionCuenta" style="display: none;">
 		<p>¿No tienes una cuenta?</p>
 		<a href="../register">Crear una cuenta</a>
 	</div>

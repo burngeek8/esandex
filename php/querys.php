@@ -8,6 +8,14 @@
 
 	$usuarioSesion	= $_SESSION['username'];
 
+	//listado de datos
+	$lis_menus 		= "SELECT * FROM menu ORDER BY NOMBRE" 
+					   or die("Error en la consulta.." . mysqli_error($con));
+	//Inserciones a la base de datos 
+	$ins_menu	= "INSERT INTO menu (NOMBRE,LINK)
+				   VALUES ('$_POST[nombre_menu]','$_POST[link]')"
+				   or die("Error en la consulta.." . mysqli_error($link));
+
 	$user = mysql_query("SELECT * FROM usuarios where USER = '$usuarioSesion'")
 	or die("problemas en consulta:".mysql_error());
 	$arrayUsuario=mysql_fetch_array($user);

@@ -9,6 +9,24 @@ function inicio()
 	$('#confirmarCuenta').on('click', confirmarCuenta);
 	$('.botonNuevo').on('click', nuevoUsuario);
 	$('.cerrarPopups').on('click', cerrarPopups);
+	$('#botonNuevoMenu').on('click', nuevoMenu);
+}
+function nuevoMenu()
+{
+	console.log('Insertado nuevo cliente');
+	$('.popMenus').slideToggle();
+	var url = "../php/insNuevoMenu.php";
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#nuevoMenu").serialize(),
+		success: function(data){
+			$("#respuesta").html(data);
+			}
+	});
+	$('.vaciar').val('');
+	setTimeout ("location.reload()", 3000);
+	return false;
 }
 function asignarMenu(obj)
 {

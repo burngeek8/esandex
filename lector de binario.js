@@ -1,0 +1,23 @@
+var cadena = '01101111';
+n = cadena.split('');
+var primero = n[0]*128;
+var segundo = n[1]*64;
+var tercero = n[2]*32;
+var cuarto  = n[3]*16;
+var quinto  = n[4]*8;
+var sexto   = n[5]*4;
+var septimo = n[6]*2;
+var octavo  = n[7]*1;
+var suma = primero+segundo+tercero+cuarto+quinto+sexto+septimo+octavo;
+var  letras = {32:' ',97:'a',98:'b',99:'c',101:'e',105:'i',108:'l',109:'m',110:'n',111:'o',112:'p',115:'s'};
+console.log(primero);
+console.log(segundo);
+console.log(tercero);
+console.log(cuarto);
+console.log(quinto);
+console.log(sexto);
+console.log(septimo);
+console.log(octavo);
+console.log(suma);
+console.log(letras[suma]);
+
