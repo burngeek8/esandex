@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?= $titulo ?> - Esandex</title>
+	<title>Esandex</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="HandheldFriendly" content="true" />
+	<link rel="shortcut icon" type="image/x-icon" href="./img/ico.png" />
+	<style type="text/css">
+		body
+		{
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-	<h1><?= $titulo ?></h1>
-	Un lugar en el que encontraras los que necesitas para llevar tu negocio fisico a internet.
-	<a href="contactos">Contactanos</a>
+	<img src="./img/construccion.png">
 </body>
 </html>
