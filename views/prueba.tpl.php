@@ -20,7 +20,7 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="login">Login</a>
+					<a href="login">Iniciar Sesión</a>
 				</li>
 			</ul>
 		</nav>
