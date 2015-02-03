@@ -28,6 +28,8 @@
 	<section class="contenido">
 		<section class="dominios">
 			<h2>Dominios</h2>
+			<h3>Ponle un nombre a tu talento </h3>
+			<p>Compra un dominio y muestra tu trabajo en internet</p>
 			<form>
 				<input type="text" placeholder="Dominio a consultar (www.esandex.com)" />
 				<input type="email" placeholder="Email" />
