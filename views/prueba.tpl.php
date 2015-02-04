@@ -30,11 +30,16 @@
 			<h2>Dominios</h2>
 			<h3>Ponle un nombre a tu talento </h3>
 			<p>Compra un dominio y muestra tu trabajo en internet</p>
-			<form>
-				<input type="text" placeholder="Dominio a consultar (www.esandex.com)" />
-				<input type="email" placeholder="Email" />
-				<input type="submit" value="Consultar">
-			</form>
+			<div class="buscador">
+				<form id="formDominio" method="post">
+					<input type="text" name="dominio" placeholder="Busca tu nuevo Dominio" />
+					<input id="btnBuscarDominio" type="submit" class="boton" value="Consultar">
+				</form>
+			</div>
+			<div id="respuestaDominios">
+				<p class="disponible">Felicitaciones su dominio	"kattydiaz.com" está libre.</p>
+				<p class="ocupado">Lo lamentamos el dominio	"esandex.com" ya está registrado.</p>
+			</div>
 		</section>
 		<section class="contactanos">
 			

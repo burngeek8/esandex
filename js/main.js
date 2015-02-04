@@ -1,7 +1,9 @@
 $(document).on('ready', inicio);
 function inicio()
 {	
+	$('#btnBuscarDominio').on('click', consultaDominio);
 	$('#LogIn').on('click', logIn);
+
 	$('#Register').on('click', PreRegister);	
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
@@ -10,6 +12,25 @@ function inicio()
 	$('.botonNuevo').on('click', nuevoUsuario);
 	$('.cerrarPopups').on('click', cerrarPopups);
 	$('#botonNuevoMenu').on('click', nuevoMenu);
+}
+function funcando()
+{
+	alert('estoy funcando');
+}
+function consultaDominio()
+{
+	
+	var url = "/querys/consultaDominio.php";
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#formDominio").serialize(),
+		success: function(data){
+			$("#respuestaDominios").html(data);
+			}
+	});
+	return false;
 }
 function nuevoMenu()
 {
@@ -82,7 +103,7 @@ function admin()
 }
 function redireccionar()
 {
-	window.location = '../'
+	window.location = '../panel'
 }
 function ocultar()
 {
@@ -114,7 +135,7 @@ function mostarMenu()
 }
 function logIn()
 {
-	var url = "../php/login.php";
+	var url = "../querys/login.php";
 
 	$.ajax({
 		type: "POST",

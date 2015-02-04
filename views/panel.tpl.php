@@ -1,7 +1,6 @@
 <?php @session_start();
-  include('php/control.php');
-  include('php/querys.php');
-
+  require 'php/control.php';
+  include'php/querys.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
