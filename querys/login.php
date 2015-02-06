@@ -1,7 +1,7 @@
  <?php
  	@session_start();
  	require 'conexion.php';
- 	
+
  	if 	(
 	 		isset($_POST['user']) 		&& !empty($_POST['user']) 		&& 
 	 		isset($_POST['password']) 	&& !empty($_POST['password'])
@@ -17,7 +17,6 @@
 	 		{
 	 			$_SESSION['control'] = 'hola';
 	 			$_SESSION['username'] = $_POST['user'];
-
 	 			
 	 		
 	 			echo "Bienvenido ".$_SESSION['username']."<img src='../img/loader.gif'><script type='text/javascript'>logueado();</script>";

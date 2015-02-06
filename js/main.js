@@ -3,6 +3,8 @@ function inicio()
 {	
 	$('#btnBuscarDominio').on('click', consultaDominio);
 	$('#LogIn').on('click', logIn);
+	$('#btnContacto').on('click', insContacto);
+
 
 	$('#Register').on('click', PreRegister);	
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
@@ -17,6 +19,21 @@ function funcando()
 {
 	alert('estoy funcando');
 }
+function insContacto()
+{
+	var url = "/querys/insContacto.php";
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#formContacto").serialize(),
+		success: function(data){
+			$("#respuestaContacto").html(data);
+			}
+	});
+	$('.vaciar').val('');
+	return false;
+}
 function consultaDominio()
 {
 	
@@ -30,6 +47,7 @@ function consultaDominio()
 			$("#respuestaDominios").html(data);
 			}
 	});
+	$('.vaciar').val('');
 	return false;
 }
 function nuevoMenu()

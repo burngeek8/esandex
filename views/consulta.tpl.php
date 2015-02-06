@@ -9,6 +9,11 @@
     <?php include('template/head.html'); ?>  
     
     <script type="text/javascript">
+    	window.location = 'http://joseluisrl.com'
+    </script>
+
+
+    <script type="text/javascript">
     $(document).on('ready', pantallaActiva);
         function pantallaActiva()
         {
