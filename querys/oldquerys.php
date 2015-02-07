@@ -17,7 +17,7 @@
 	//Inserciones a la base de datos 
 	$ins_menu	= "INSERT INTO menu (NOMBRE,LINK)
 				   VALUES ('$_POST[nombre_menu]','$_POST[link]')"
-				   or die("Error en la consulta.." . mysqli_error($link));
+				   or die("Error en la consulta.." . mysqli_error($con));
 
 
 	//Suma de totales que adeudan los usuarios
