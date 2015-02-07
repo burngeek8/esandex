@@ -4,6 +4,7 @@ function inicio()
 	$('#btnBuscarDominio').on('click', consultaDominio);
 	$('#LogIn').on('click', logIn);
 	$('#btnContacto').on('click', insContacto);
+	$('#botonNuevoMenu').on('click', nuevoMenu);
 
 
 	$('#Register').on('click', PreRegister);	
@@ -13,7 +14,6 @@ function inicio()
 	$('#confirmarCuenta').on('click', confirmarCuenta);
 	$('.botonNuevo').on('click', nuevoUsuario);
 	$('.cerrarPopups').on('click', cerrarPopups);
-	$('#botonNuevoMenu').on('click', nuevoMenu);
 }
 function funcando()
 {
@@ -54,7 +54,7 @@ function nuevoMenu()
 {
 	console.log('Insertado nuevo cliente');
 	$('.popMenus').slideToggle();
-	var url = "../php/insNuevoMenu.php";
+	var url = "/querys/insNuevoMenu.php";
 	$.ajax({
 		type: "POST",
 		url: url,

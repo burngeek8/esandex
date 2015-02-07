@@ -414,8 +414,7 @@ header .logo
 }
 .deuda
 {
-	padding-top: 50px;
-
+	padding: 50px;
 }
 .deuda p
 {
@@ -479,7 +478,7 @@ header .logo
 }
 .listaDeudas
 {
-	margin-top: 10px;
+	margin: 10px;
 	padding: 0 10px;
 }
 .listaDeudas .item
@@ -499,7 +498,7 @@ header .logo
 }
 .listaDeudas .item .fecha
 {
-	width: 40px;
+	width: 35px;
 	padding: 0 10px;
 	font-size: 13px;
 	text-align: center;
@@ -715,8 +714,8 @@ header .logo
 }
 .usuario
 {
-	width: 45px;
-	height: 45px;
+	width: 59px;
+	height: 59px;
 	float: right;
 	cursor: pointer;
 }

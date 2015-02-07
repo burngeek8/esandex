@@ -4,9 +4,9 @@
 	require 'querys/querys.php';
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-	<title>Panel - Esandex</title>
+	<title>	Mantenimiento menus - Esandex</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
@@ -30,15 +30,13 @@
 	        font-size: 15px;
 	        bottom: 0; 
 	    }
-	    .<?= $arrayUsuario['USER']; ?>
-	    {
-	        display: none;
-	    }
 	</style>
 </head>
 <body>
 	<header>
-	    <div class="logo"></div>
+	    <a href="panel">
+	    	<div class="logo"></div>
+	    </a>
 	    <div class="usuario">
 	        <img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
 	    </div>
@@ -53,53 +51,43 @@
 	        </li>
 	    </ul>
 	</div>
-	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
-
-	<div class="deuda">
-        <p>Tu estado de cuenta con Esandex es</p>   
-        <div class="montoDeuda"> S/. <span class="monto"> <?= totalDeudaUsuario($email) ?> </span></div>
-    </div>
-    <div class="listaDeudas">
-      <?php while ($reg=mysql_fetch_array($deudaUsuario)) {?>
-        <div class="item">
-          <?php $date = date_create($reg['FECHA_REGISTRO']); ?>      
-          <div class="fecha"><?= date_format($date, 'd M Y') ?></div>
-          <div class="detalle"><?= $reg['DETALLE']  ?></div>
-          <div class="monto">S/. <?= $reg['MONTO']  ?></div>
-        </div>
-      <?php } ?>
-    </div>
-    <div class="menu">
+	<div class="menu">
         <ul>
-        <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
+        <?php while ($reg=mysql_fetch_array($menu)) {?>
           <li>
             <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
           </li>
         <?php } ?>
         </ul>
     </div>
-    <div id="respuestaUbicacion"><?= $arrayUsuario['USER']; ?></div>
-    <footer>
+	<h4>Nuevo Menu</h4>
+	<div id="respuesta"></div>
+	<form id="nuevoMenu" method="post">
+		<label>Nombre Menu</label>
+		<input name="nombre_menu" type="text">
+		<label>Link menu</label>
+		<input name="link" type="text">
+		<input id="botonNuevoMenu" type="submit">
+	</form>
+	<footer>
 		<p>Esandex 2015</p>
 	</footer>
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript">
-		function pepe()
-	      {
-	        console.log('se ejecuto la funcion');
-	        if($('.menu ul li').length == 0)
-	        {
-	          console.log('no hay menus asignados');
-	        } 
-	        else
-	        {
-	          $('.mensajeParaElUsuario').css('display', 'none');
-	          console.log('parece tener menus');          
-	        }
-	      }
-      pepe();
-    </script>
+		  WebFontConfig = {
+		    google: { families: [ 'Open+Sans::latin' ] }
+		  };
+		  (function() {
+		    var wf = document.createElement('script');
+		    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		    wf.type = 'text/javascript';
+		    wf.async = 'true';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(wf, s);
+		  })(); 
+	</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
-	@session_start();
-	if($_SESSION['control'] != "hola")
+	session_start();
+	if(!isset($_SESSION['control']))
 		{
 			session_destroy();
 			header('location: login');

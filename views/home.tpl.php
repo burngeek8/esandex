@@ -25,16 +25,19 @@
 	</header>
 	<section class="contenido">
 		<section class="dominios">
-			<h2>Dominios</h2>
-			<h3>Ponle un nombre a tu talento </h3>
-			<p>Compra un dominio y muestra tu trabajo en internet</p>
-			<div class="buscador">
-				<form id="formDominio" method="post">
-					<input type="text" name="dominio" placeholder="Busca tu nuevo Dominio" />
-					<input id="btnBuscarDominio" type="submit" class="boton" value="Consultar">
-				</form>
+			<div class="content">
+				<h2>Dominios</h2>
+				<h3>Ponle un nombre a tu talento </h3>
+				<p>Compra un dominio y muestra tu trabajo en internet</p>
+				<div class="buscador">
+					<form id="formDominio" method="post">
+						<input type="text" name="dominio" placeholder="Busca tu nuevo Dominio" />
+						<input id="btnBuscarDominio" type="submit" class="boton" value="Consultar">
+					</form>
+				</div>
+				<div id="respuestaDominios"></div>
 			</div>
-			<div id="respuestaDominios"></div>
+			<iframe class="fbBox" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fesandex&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=749322088466311" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>
 		</section>
 		<section class="contactanos">
 			<h2>Contactenos</h2>
