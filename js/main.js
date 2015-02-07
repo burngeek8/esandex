@@ -19,6 +19,14 @@ function funcando()
 {
 	alert('estoy funcando');
 }
+function encontrarNumeroDeAccionesSeleccionadas(obj)
+{
+var disparador = obj;
+//alert($(disparador).parents('#formMenuUsuarios').children('.listaMenus').children('.opcionMenu').children('input:checked').length);
+var pepe = $(disparador).parents('#formMenuUsuarios').children('.listaMenus').children('.opcionMenu').children('input:checked').length;
+$(disparador).parents('#formMenuUsuarios').children('#checksSeleccionados').val(pepe);
+return false;
+}
 function insContacto()
 {
 	var url = "/querys/insContacto.php";
