@@ -623,6 +623,7 @@ header .logo
 	background-color: #fff;
 	border-radius: 5px 5px 0 0;
 	padding-bottom: 5px;
+	width: 250px;
 }
 .tarjeta .opciones .agregarMenus
 {

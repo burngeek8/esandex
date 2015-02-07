@@ -1,13 +1,15 @@
 
 <?php
-	include("conexion.php");
+	require 'conexion.php';
 
 	if(isset($_POST['email']) && !empty($_POST['email']))
 	{
-		$con=mysql_connect($host,$user,$pw)or die("problemas al conectar");
-		mysql_select_db($db,$con)or die("problemas al conectar la bd");
+		//$con=mysql_connect($host,$user,$pw)or die("problemas al conectar");
+		//mysql_select_db($db,$con)or die("problemas al conectar la bd");
 		$email = mysql_query("SELECT EMAIL FROM pre_registro WHERE EMAIL = '$_POST[email]'",$con);
+
 		$arrEmails = mysql_fetch_array($email);
+
 		if ($_POST['email'] == $arrEmails['EMAIL'])
 		{
 			echo "Este email ya tiene un pre Registro";
@@ -37,13 +39,13 @@
 						</head>
 						<body style='margin: 0; background: #efefef; overflow: hidden; padding: 0 20px; font-size: 18px;'>
 							<div style='background: #4B7F00; max-height: 45px;'>
-								<img src='http://esandex.joseluisrl.com/img/logoEmail.png'>
+								<img src='http://esandex.com/img/logoEmail.png'>
 							</div>
 							<div>
 								<h1 style='color: #4B7F00; font-size: 25px; font-weight: normal; '>¡Tu cuenta de <strong style='color: #375d00;'> ESANDEX </strong> ya está casi lista! </h1>
 								<p>Tu correo es <strong style='color: #375d00;'>".$_POST['email']."</strong></p>
 								<p>Ahora lo que necesitas es un <strong style='color: #375d00;'>Usuario </strong>y una <strong style='color: #375d00;'>Contraseña</strong>, da clic al enlace para crear tu usuario.</p>
-								<a href='http://dev.joseluisrl.com/confirmar-cuenta?email=".$_POST["email"]."'' style='cursor: pointer; background: #4B7F00; text-decoration: none; border-radius: 5px; color: #e9e9e9; font-weight: bolder; padding: 10px 50px;'>Crear usuario</a>
+								<a href='http://esandex.com/confirmar-cuenta?email=".$_POST["email"]."'' style='cursor: pointer; background: #4B7F00; text-decoration: none; border-radius: 5px; color: #e9e9e9; font-weight: bolder; padding: 10px 50px;'>Crear usuario</a>
 								<p>Disfruta <br /> -Team Esandex</p>
 							</div>
 							<div style='background: #4B7F00; color: #e9e9e9; height: 45px;'>

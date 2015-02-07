@@ -1,6 +1,6 @@
  <?php
  	@session_start();
- 	include("conexion.php");
+ 	require 'conexion.php';
 	$con=mysql_connect($host,$user,$pw) or die("problemas con server");
 	mysql_select_db($db,$con)or die("problemas con BD");
  	if 	(
@@ -31,12 +31,12 @@
 				 		}
 				 		else
 				 		{
-				 			mysql_query("INSERT INTO usuarios (USER,PASS,EMAIL,AVATAR,CATEGORIA) 
+				 			mysql_query("INSERT INTO usuarios (USER,PASS,EMAIL,AVATAR_USUARIO,CATEGORIA) 
 				 							VALUES ('$_POST[user]',
 				 									'$_POST[password]',
 				 									'$_POST[email]',
 				 									'user.png',
-				 									'usuario')",$con);
+				 									'2')",$con);
 							mysql_query("UPDATE pre_registro 
 											SET CONFIRMADO = '1' 
 				 							WHERE EMAIL = '$_POST[email]'",$con);

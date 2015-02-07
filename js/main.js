@@ -5,13 +5,13 @@ function inicio()
 	$('#LogIn').on('click', logIn);
 	$('#btnContacto').on('click', insContacto);
 	$('#botonNuevoMenu').on('click', nuevoMenu);
-
-
 	$('#Register').on('click', PreRegister);	
+	$('#confirmarCuenta').on('click', confirmarCuenta);
+
+
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
-	$('#confirmarCuenta').on('click', confirmarCuenta);
 	$('.botonNuevo').on('click', nuevoUsuario);
 	$('.cerrarPopups').on('click', cerrarPopups);
 }
@@ -21,11 +21,11 @@ function funcando()
 }
 function encontrarNumeroDeAccionesSeleccionadas(obj)
 {
-var disparador = obj;
-//alert($(disparador).parents('#formMenuUsuarios').children('.listaMenus').children('.opcionMenu').children('input:checked').length);
-var pepe = $(disparador).parents('#formMenuUsuarios').children('.listaMenus').children('.opcionMenu').children('input:checked').length;
-$(disparador).parents('#formMenuUsuarios').children('#checksSeleccionados').val(pepe);
-return false;
+	var disparador = obj;
+	//alert($(disparador).parents('#formMenuUsuarios').children('.listaMenus').children('.opcionMenu').children('input:checked').length);
+	var pepe = $(disparador).parents('#formMenuUsuarios').children('.listaMenus').children('.opcionMenu').children('input:checked').length;
+	$(disparador).parents('#formMenuUsuarios').children('#checksSeleccionados').val(pepe);
+	return false;
 }
 function insContacto()
 {
@@ -109,7 +109,7 @@ function chatear()
 }
 function confirmarCuenta()
 {
-	var url = "../php/confirmarCuenta.php";
+	var url = "../querys/confirmarCuenta.php";
 
 	$.ajax({
 		type: "POST",
@@ -178,7 +178,7 @@ function PreRegister()
 {
 	console.log('usuario pre registrado');
 	$('.popNuevoUsuario').slideToggle();
-	var url = "../php/insPreRegistro.php";
+	var url = "../querys/insPreRegistro.php";
 
 	$.ajax({
 		type: "POST",

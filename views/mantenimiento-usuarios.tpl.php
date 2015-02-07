@@ -77,7 +77,7 @@
             <div class="listaMenus">
               <?php while ($arrMenus=mysql_fetch_array($menu)) {?>
                 <div class="opcionMenu">
-                  <input  onchange="encontrarNumeroDeAccionesSeleccionadas(this);" type="checkbox" id="Menu<?= $arrMenus['ID']; ?>" name="id_menu" value="<?= $arrMenus['ID'] ?>" />
+                  <input  onchange="encontrarNumeroDeAccionesSeleccionadas(this);" type="checkbox" id="Menu<?= $arrMenus['ID_MENU']; ?>" name="id_menu" value="<?= $arrMenus['ID_MENU']; ?>" />
                   <label for="Menu<?= $arrMenus['ID_MENU']; ?>"><?= $arrMenus['DESCRIPCION']; ?></label>
                 </div>
               <?php } mysql_data_seek($menu, 0);?>      
@@ -86,8 +86,10 @@
           </form>
         </div>
       </div>
+
         <!-- Nuevo usuario -->
       <div id="respuestaRegister"></div>
+
       <div class="popup popNuevoUsuario">
         <div class="tarjeta nuevoUsuario">
           <div class="titulo">NUEVO USUARIO
@@ -100,6 +102,7 @@
           </form>
         </div>
       </div>
+
       <div class="botonNuevo"></div>  
     </div>
   <footer>
