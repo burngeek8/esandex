@@ -22,6 +22,9 @@
 </head>
 <body>
 	<div class="formulario">
+		<a href="/">
+			<div class="logo"></div>			
+		</a>
 		<h1>Iniciar Sesión</h1>
 		<div id="respuestaLogin" class="cajaDialogo">
 			<img src="../img/loader.gif">

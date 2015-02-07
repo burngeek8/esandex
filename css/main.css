@@ -9,7 +9,6 @@ body
     color: rgb(50,50,50);
     height: 100%; 
     margin: 0 auto;
-    max-width: 1000px;
     padding: 0;
 }
 footer
@@ -412,9 +411,13 @@ header .logo
 	margin: 5px;
 	padding: 10px;
 }
+.contentPanel
+{
+	position: relative;
+}
 .deuda
 {
-	padding: 50px;
+	padding: 45px;
 }
 .deuda p
 {
@@ -434,12 +437,7 @@ header .logo
 }
 .formulario
 {
-	background-image: url('../img/logo.png');
 	max-width: 300px;
-	background-size: 300px;
-	background-position: center 20px;
-	background-repeat: no-repeat;
-	padding-top: 100px;
 	margin: 0 auto;
 }
 .formulario label
@@ -475,6 +473,15 @@ header .logo
 .formulario .botonFormulario:hover
 {
 	background-color: #375d00;
+}
+.formulario .logo
+{
+	background-image: url('../img/logo.png');
+	background-size: 300px;
+	background-position: center 20px;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 80px;
 }
 .listaDeudas
 {

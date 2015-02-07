@@ -41,7 +41,14 @@
 		</section>
 		<section class="contactanos">
 			<h2>Contactenos</h2>
-			<p class="">Si ya decidió que dominio desea comprar comuníquese con nosotros a través de este formulario</p>
+			<p class="">
+				Si ya decidió que dominio desea comprar comuníquese con nosotros a través de este formulario<br />
+				Y te interesa trabajar con nosotros y formar parte del equipo de desarrollo de <strong>ESANDEX</strong>, escríbenos y nos estaremos comunicando.<br />
+				También puedes dejarnos consultas sugerencias y más a través del formulario ubicado aquí a la derecha.<br />
+				Saludos.<br />
+				Atentamente Team Esandex
+			</p>
+
 			<form id="formContacto" class="formContacto" method="post">
 				<label>Email</label>
 				<input name="email" class="vaciar" type="email" />
