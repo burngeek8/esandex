@@ -1,25 +1,58 @@
-<?php @session_start();
-  include('../php/control.php');
-  include('../php/querys.php');
-
+<?php 
+  require 'querys/control.php';
+  require 'querys/conexion.php';
+  require 'querys/querys.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Mantenimiento Usuarios - Esandex</title>
-    <?php include('../template/head.html'); ?>  
-  </head>
+  <title> Mantenimiento menus - Esandex</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
+   <!-- Hojas de estilo -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/ico.png" />
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
   <body>
-    <?php include('../template/header.html'); ?>
+   <header>
+      <a href="panel">
+        <div class="logo"></div>
+      </a>
+      <div class="usuario">
+          <img src="img/avatares/<?= $arrayUsuario['AVATAR_USUARIO']; ?>">
+      </div>
+  </header>
+  <div class="opcionesUsuario">
+      <ul>
+          <li style="display: none;">
+              <a href="settings">CONFIGURACION</a>
+          </li>
+          <li>
+              <a href="querys/salir.php">CERRAR SESIÓN</a>
+          </li>
+      </ul>
+  </div>
+  <div class="menu">
+        <ul>
+        <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
+          <li>
+            <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
+          </li>
+        <?php } ?>
+        </ul>
+    </div>
+
+
     <?php while ($arrUsuarios=mysql_fetch_array($usuarios)) {?>
     <div class="tarjeta">
       <div id="idUsuario" style="display: none;"><?= $arrUsuarios['ID_USUARIO']; ?></div>
       <div class="titulo"><?= $arrUsuarios['USER']; ?></div>
       <div class="imagen">
-        <img src="/img/<?= $arrUsuarios['AVATAR']; ?>">
+        <img src="/img/avatares/<?= $arrUsuarios['AVATAR_USUARIO']; ?>">
       </div>
       <div class="detalles">
-        <p class="nombre"><?= $arrUsuarios['NOMBRE']; ?></p>
         <p class="email"><?= $arrUsuarios['EMAIL']; ?></p>
       </div>
       <div class="social"></div>
@@ -66,5 +99,12 @@
       </div>
     </div>
     <div class="botonNuevo"></div>  
+
+  <footer>
+    <p>Esandex 2015</p>
+  </footer>
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

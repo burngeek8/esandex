@@ -53,6 +53,15 @@
 	        </li>
 	    </ul>
 	</div>
+	<div class="menu">
+        <ul>
+        <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
+          <li>
+            <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
+          </li>
+        <?php } ?>
+        </ul>
+    </div>
 	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
 
 	<div class="deuda">
@@ -69,16 +78,6 @@
         </div>
       <?php } ?>
     </div>
-    <div class="menu">
-        <ul>
-        <?php while ($reg=mysql_fetch_array($usuario_menu)) {?>
-          <li>
-            <a href="<?= $reg['URL'] ?>"><?= $reg['DESCRIPCION']  ?></a>
-          </li>
-        <?php } ?>
-        </ul>
-    </div>
-    <div id="respuestaUbicacion"><?= $arrayUsuario['USER']; ?></div>
     <footer>
 		<p>Esandex 2015</p>
 	</footer>

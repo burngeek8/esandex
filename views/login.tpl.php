@@ -10,6 +10,12 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../img/ico.png">
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">	
+	<style type="text/css">
+		body
+		{
+			border-top: 5px #4B7F00 solid;
+		}
+	</style>
 	<!-- Scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script> 
