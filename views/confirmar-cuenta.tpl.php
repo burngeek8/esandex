@@ -38,7 +38,7 @@
 	</div>
 	<div class="opcionCuenta">
 		<p>¿No tienes una cuenta?</p>
-		<a href="../register">Crear una cuenta</a>
+		<a href="../login">Iniciar Sesión</a>
 	</div>
 </body>
 </html>
