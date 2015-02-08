@@ -71,18 +71,17 @@
           <div class="titulo">ACCESO <?= $arrUsuarios['USER']; ?>
             <div class="cerrar cerrarPopups"></div>
           </div>
-          <form id="formMenuUsuarios" action="/querys/updUsuario.php" class="formularioPopup" method="post">
-            <input id="inputIdUsuario" class="vaciar" name="id_usuario" type="text" value="">
-            <input type="text" class="vaciar" name="numeroChecks" id="checksSeleccionados">
+          <form id="formMenuUsuarios" class="formulario" action="/querys/updUsuario.php" class="formularioPopup" method="post">
+            <input id="inputIdUsuario" class="vaciar" name="id_usuario" type="hidden" value="">
             <div class="listaMenus">
               <?php while ($arrMenus=mysql_fetch_array($menu)) {?>
                 <div class="opcionMenu">
-                  <input  onchange="encontrarNumeroDeAccionesSeleccionadas(this);" type="checkbox" id="Menu<?= $arrMenus['ID_MENU']; ?>" name="id_menu[]" value="<?= $arrMenus['ID_MENU']; ?>" />
+                  <input type="checkbox" id="Menu<?= $arrMenus['ID_MENU']; ?>" name="id_menu[]" value="<?= $arrMenus['ID_MENU']; ?>" />
                   <label for="Menu<?= $arrMenus['ID_MENU']; ?>"><?= $arrMenus['DESCRIPCION']; ?></label>
                 </div>
               <?php } mysql_data_seek($menu, 0);?>      
             </div>
-            <input id="actualizarMenusUsuarios" class="botonPopup" type="submit" value="Actualizar" >
+            <input id="actualizarMenusUsuarios" class="botonFormulario" type="submit" value="Actualizar" >
           </form>
         </div>
       </div>
