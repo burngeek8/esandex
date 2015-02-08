@@ -31,9 +31,9 @@ h1
 header
 {
 	background-color: #4B7F00;
-	text-align: left;
+	height: 50px;
 	position: relative;
-	border-bottom: 5px #4B7F00 solid;
+	text-align: left;
 }
 header nav
 {
@@ -458,7 +458,7 @@ header .logo
 	width: 95%;
 	margin: 0 auto;
 }
-.formulario .botonFormulario
+.formulario input[type="submit"]
 {
 	background-color: #4B7F00;
 	border-radius: 5px;
@@ -722,8 +722,8 @@ header .logo
 }
 .usuario
 {
-	width: 59px;
-	height: 59px;
+	width: 50px;
+	height: 50px;
 	float: right;
 	cursor: pointer;
 }

@@ -62,7 +62,7 @@
     </div>
 	<h4>Nuevo Menu</h4>
 	<div id="respuesta"></div>
-	<form id="nuevoMenu" method="post">
+	<form id="nuevoMenu" class="formulario" method="post">
 		<label>Nombre Menu</label>
 		<input name="nombre_menu" type="text">
 		<label>Link menu</label>

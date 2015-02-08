@@ -71,7 +71,7 @@
           <div class="titulo">ACCESO <?= $arrUsuarios['USER']; ?>
             <div class="cerrar cerrarPopups"></div>
           </div>
-          <form id="formMenuUsuarios" class="formulario" action="/querys/updUsuario.php" class="formularioPopup" method="post">
+          <form id="formMenuUsuarios" class="formulario" class="formularioPopup" method="post">
             <input id="inputIdUsuario" class="vaciar" name="id_usuario" type="hidden" value="">
             <div class="listaMenus">
               <?php while ($arrMenus=mysql_fetch_array($menu)) {?>

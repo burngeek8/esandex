@@ -7,7 +7,7 @@ function inicio()
 	$('#botonNuevoMenu').on('click', nuevoMenu);
 	$('#Register').on('click', PreRegister);	
 	$('#confirmarCuenta').on('click', confirmarCuenta);
-
+	$('#actualizarMenusUsuarios').on('click', updUsuario);
 
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
@@ -19,7 +19,23 @@ function funcando()
 {
 	alert('estoy funcando');
 }
+function updUsuario()
+{
+	var url = "/querys/updUsuario.php";
 
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#formMenuUsuarios").serialize(),
+		success: function(data){
+			$("#respuestaRegister").html(data);
+
+			}
+	});
+	$('.vaciar').val('');
+	cerrarPopups();
+	return false;
+}
 function insContacto()
 {
 	var url = "/querys/insContacto.php";
