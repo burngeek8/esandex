@@ -65,7 +65,7 @@
 	<p class="mensajeParaElUsuario">Bienvenido <strong><?= $arrayUsuario['USER']; ?></strong>, estamos trabajando para habilitarte las aplicaciones que tenemos para ti, se paciente y vuelve luego. </p>
 
 	<div class="deuda">
-        <p>Tu estado de cuenta con Esandex es</p>   
+        <p>Tu estado de cuenta es</p>   
         <div class="montoDeuda"> S/. <span class="monto"> <?= totalDeudaUsuario($email) ?> </span></div>
     </div>
     <div class="listaDeudas">
