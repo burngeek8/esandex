@@ -1,3 +1,14 @@
+<?php 
+	session_start(); 
+	if(!isset($_SESSION['username']))
+	{
+		$username = '';
+	}else
+	{
+		$username = $_SESSION['username'];
+		
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +21,18 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	
+
 </head>
 <body>
 	<header>
 		<div class="logo"></div>
 		<nav>
 			<ul>
-				<li>
+				<li id="login">
 					<a href="login">Iniciar Sesión</a>
+				</li>
+				<li id="acceso">
+					<a href="panel">Entrar</a>
 				</li>
 			</ul>
 		</nav>
@@ -79,6 +93,19 @@
 		    var s = document.getElementsByTagName('script')[0];
 		    s.parentNode.insertBefore(wf, s);
 		  })(); 
+	</script>
+	<script type="text/javascript">
+		var usuario = '<?= $username ?>';
+		if (usuario == '') 
+			{
+				console.log('el usuario no se a logueado');
+				$('#acceso').css('display', 'none');
+			}
+		else
+			{
+				console.log('el usuario ' + usuario + ' se encuentra activo');
+				$('#login').css('display', 'none');
+			}
 	</script>
 </body>
 </html>

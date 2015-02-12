@@ -9,6 +9,8 @@ function inicio()
 	$('#confirmarCuenta').on('click', confirmarCuenta);
 	$('#actualizarMenusUsuarios').on('click', updUsuario);
 
+	$('#btnInsCliente').on('click', insCliente);
+
 	$('.usuario img').on('click', mostrarOpcionesUsuario);
 	$('.previo').on('click', chatear);
 	$('.chatAmigo .titulo').on('click', listaDeChats);
@@ -18,6 +20,23 @@ function inicio()
 function funcando()
 {
 	alert('estoy funcando');
+}
+function insCliente()
+{
+	var url = "/querys/insCliente.php";
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: $("#formInsCliente").serialize(),
+		success: function(data){
+			$("#respuesta").html(data);
+
+			}
+	});
+	$('.vaciar').val('');
+	cerrarPopups();
+	return false;
 }
 function updUsuario()
 {

@@ -44,6 +44,11 @@
 									or die("problemas en consulta:".mysql_error());
 	$lis_menus 		= "SELECT * FROM menu ORDER BY DESCRIPCION" 
 					   or die("Error en la consulta.." . mysqli_error($con));
+	$lis_clientes	= mysql_query("SELECT * FROM clientes AS A
+								   LEFT JOIN usuarios AS B
+								   		ON A.ID_USUARIO = B.ID_USUARIO
+								   ORDER BY NOMBRE_CLIENTE") 
+					   or die("Error en la consulta.." . mysqli_error($con));
 	$usuarios 		= mysql_query("SELECT * FROM usuarios ORDER BY ID_USUARIO DESC")
 						or die("problemas en consulta:".mysql_error());
  ?>

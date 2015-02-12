@@ -15,5 +15,6 @@
 </head>
 <body>
 	<img src="./img/construccion.png">
+	<script type="text/javascript" src="js/analytics.js"></script>
 </body>
 </html>
